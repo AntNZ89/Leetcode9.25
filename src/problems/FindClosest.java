@@ -1,6 +1,6 @@
 package problems;
 
-public class FindCloset {
+public class FindClosest {
     public int findClosest(int x, int y, int z) {
 
         int num1 = Math.abs(z-x);
