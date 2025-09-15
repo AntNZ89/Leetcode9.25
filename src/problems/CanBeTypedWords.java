@@ -18,10 +18,8 @@ public class CanBeTypedWords {
         for (int i = 0 ; i < text.length() ; i++){
             if (set.contains(text.charAt(i)) && bol){
                 bol = false;
-                cnt++;
-                if (cnt == 1){
-                    count++;
-                }
+                count++;
+
             }
             else if (text.charAt(i) == ' '){
                 bol = true;
@@ -29,7 +27,9 @@ public class CanBeTypedWords {
                 words++;
             }
         }
+
         return words - count;
+
 
     }
 }
