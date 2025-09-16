@@ -8,7 +8,6 @@ public class PlusOne {
 
         boolean bol = true;
         int k = 1;
-        List<Integer> list = new LinkedList<>();
         int[] digits2 = new int[digits.length+1];
         boolean all9 = true;
 
@@ -33,27 +32,7 @@ public class PlusOne {
                 return digits;
             }
             else if (digits[digits.length-k] == 9){
-                if (digits.length-k == 0){
-
-                    for (int i = 0 ; i < digits.length ; i++){
-                        list.add(digits[i]);
-                    }
-
-                    list.add(0, 1);
-
-                    for (int i = 0 ; i < list.size() ; i++){
-                        digits2[i] = list.get(i);
-                    }
-
-                    digits2[digits.length-k+1] = 0;
-
-                    return digits2;
-                }
-                else {
-
-                    digits[digits.length-k] = 0;
-
-                }
+                digits[digits.length-k] = 0;
             }
 
             k++;
